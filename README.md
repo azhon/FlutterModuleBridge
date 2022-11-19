@@ -1,9 +1,9 @@
 ## [English Doc](https://github.com/azhon/FlutterModuleBridge/blob/main/README-EN.md)
 
-### Dart模块化开发，事件通信模板生成插件(AS/IDEA)
+### Dart模块化开发，事件通信模板生成插件(AS、IDEA)
 
 ### 对于`Bridge`模板有如下几个要求
-1. 一个dart文件只能有一个class
+1. 一个dart文件只能有一个class，存放[/lib/]目录下
 2. class必须`with Bridge`
 3. 方法必须使用@Url注解
 4. 方法返回值必须是`R`或者`Future<R>`类型
