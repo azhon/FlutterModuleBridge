@@ -1,4 +1,7 @@
 ### Dart modular development, event communication template generation plugin (AS, IDEA)
+<img src="https://github.com/azhon/FlutterModuleBridge/blob/main/images/plugin.png">
+- Menu `Build -> FlutterModuleBridge`
+- Or use shortcut keys`Alt + B`
 
 ### There are several requirements for the `Bridge` template
 1. A dart file can only have one class, stored in the [/lib/] directory
