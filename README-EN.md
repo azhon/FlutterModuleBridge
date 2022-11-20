@@ -5,7 +5,7 @@
 - Or use shortcut keys`Alt + B`
 
 ### There are several requirements for the `Bridge` template
-1. A dart file can only have one class, stored in the [/lib/] directory
+1. A dart file can only have one class, stored in the `lib/` directory
 2. The class must be `with Bridge`
 3. The method must be annotated with `@Url`
 4. The return value of the method must be `R` or `Future<R>` type
