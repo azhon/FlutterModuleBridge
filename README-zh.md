@@ -1,3 +1,5 @@
+## [插件市场安装](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge)
+
 ### Dart模块化开发，事件通信模板生成插件(AS、IDEA)
 <img src="https://github.com/azhon/FlutterModuleBridge/blob/main/imgs/plugin.png" width="250" >
 

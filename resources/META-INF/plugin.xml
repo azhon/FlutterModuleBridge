@@ -1,14 +1,14 @@
 <idea-plugin>
     <id>com.azhon.flutter.module.bridge</id>
     <name>FlutterModuleBridge</name>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <vendor email="azhon.cn@gmail.com" url="https://github.com/azhon/FlutterModuleBridge">azhon</vendor>
 
     <description><![CDATA[
       <p>Flutter modular development plugin.</p>
       <ul>
         <li>Mainly solve the decoupling between modules.</li>
-        <li>Pressing alt+b will automatically generate event communication codes.</li>
+        <li>Pressing Alt+B will automatically generate event communication codes.</li>
         <li>Or in the menu Build —> FlutterModuleBridge.</li>
       </ul>
     ]]></description>
