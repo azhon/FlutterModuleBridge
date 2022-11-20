@@ -1,33 +1,32 @@
-## [English Doc](https://github.com/azhon/FlutterModuleBridge/blob/main/README-EN.md)
+## [Chinese Doc](https://github.com/azhon/FlutterModuleBridge/blob/main/README-zh.md)
 
-### Dart模块化开发，事件通信模板生成插件(AS、IDEA)
+### Dart modular development, event communication template generation plugin (AS, IDEA)
 <img src="https://github.com/azhon/FlutterModuleBridge/blob/main/imgs/plugin.png" width="250" >
 
-- 菜单栏`Build -> FlutterModuleBridge`
-- 或者使用快捷键`Alt + B`
+- Menu `Build -> FlutterModuleBridge`
+- Or use shortcut keys`Alt + B`
 
-### 对于`Bridge`模板有如下几个要求
-1. 一个dart文件只能有一个class，存放`lib/`目录下
-2. class必须`with Bridge`
-3. 方法必须使用`@Url`注解
-4. 方法返回值必须是`R`或者`Future<R>`类型
+### There are several requirements for the `Bridge` template
+1. A dart file can only have one class, stored in the `lib/` directory
+2. The class must be `with Bridge`
+3. The method must be annotated with `@Url`
+4. The return value of the method must be `R` or `Future<R>` type
 
-### 示例如下：
+### Examples:
 
 ```java
 import 'package:module_bridge/module_bridge.dart';
 
 class UserBridge with Bridge {
 
-  @Url(url: '/user/getUserId', desc: '获取用户Id')
-  R getUserId() {
-    return R.ok(data: 1234);
-  }
+   @Url(url: '/user/getUserId', desc: 'Get UserId')
+   R getUserId() {
+     return R.ok(data: 1234);
+   }
 
-  @Url(url: '/user/getUserName', desc: '获取用户名称')
-  Future<R> getUserName() async {
-    return R.ok(data: 'azhon');
-  }
+   @Url(url: '/user/getUserName', desc: 'Get user name')
+   Future<R> getUserName() async {
+     return R.ok(data: 'azhon');
+   }
 }
-
 ```
