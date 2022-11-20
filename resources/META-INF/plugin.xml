@@ -11,6 +11,7 @@
         <li>Pressing Alt+B will automatically generate event communication codes.</li>
         <li>Or in the menu Build —> FlutterModuleBridge.</li>
       </ul>
+      <br><a href="https://github.com/azhon/module_bridge#readme">Instructions for use</a></br>
     ]]></description>
 
     <change-notes><![CDATA[
