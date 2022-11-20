@@ -2,13 +2,15 @@
     <id>com.azhon.flutter.module.bridge</id>
     <name>FlutterModuleBridge</name>
     <version>1.0</version>
-    <vendor email="azhon.cn@gmail.com" url="https://github.com/azhon/FlutterModuleBridge">FlutterModuleBridge</vendor>
+    <vendor email="azhon.cn@gmail.com" url="https://github.com/azhon/FlutterModuleBridge">azhon</vendor>
 
     <description><![CDATA[
-      <br>Flutter modular development plugin.</br>
-      <br>Mainly solve the decoupling between modules.</br>
-      <br>Pressing alt+b will automatically generate event communication codes.</br>
-      <br>or in the menu Build —> FlutterModuleBridge.</br>
+      <p>Flutter modular development plugin.</p>
+      <ul>
+        <li>Mainly solve the decoupling between modules.</li>
+        <li>Pressing alt+b will automatically generate event communication codes.</li>
+        <li>Or in the menu Build —> FlutterModuleBridge.</li>
+      </ul>
     ]]></description>
 
     <change-notes><![CDATA[
