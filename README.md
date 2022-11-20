@@ -3,7 +3,7 @@
 ## [Plugin marketplace install](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge)
 
 ### Dart modular development, event communication template generation plugin (AS, IDEA)
-<img src="https://github.com/azhon/FlutterModuleBridge/blob/main/imgs/plugin.png" width="250" >
+<img src="https://github.com/azhon/FlutterModuleBridge/blob/main/imgs/plugin.png" width="750" >
 
 - Menu `Build -> FlutterModuleBridge`
 - Or use shortcut keys`Alt + B`
