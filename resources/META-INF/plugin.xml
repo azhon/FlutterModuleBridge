@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.azhon.flutter.module.bridge</id>
     <name>FlutterModuleBridge</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <vendor email="azhon.cn@gmail.com" url="https://github.com/azhon/FlutterModuleBridge">azhon</vendor>
 
     <description><![CDATA[
@@ -15,7 +15,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      <br>published version 1.0.0</br>
+      <br>Support bridge parameters</br>
     ]]>
     </change-notes>
 
