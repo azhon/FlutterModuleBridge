@@ -2,6 +2,7 @@ package com.azhon.bridge.util;
 
 import com.azhon.bridge.common.Constants;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectUtil;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiManager;
@@ -31,7 +32,7 @@ public class FileUtil {
      */
     public static Collection<VirtualFile> getBridgeDartFile(Project project) {
         PsiManager psiManager = PsiManager.getInstance(project);
-        VirtualFile libFile = project.getBaseDir().findChild(Constants.ROOT_DIR);
+        VirtualFile libFile = ProjectUtil.guessProjectDir(project).findChild(Constants.ROOT_DIR);
         if (libFile == null || !libFile.exists()) {
             NotificationUtil.showNotify("Error: [lib] directory not found!");
             return null;

@@ -7,6 +7,7 @@ import com.intellij.openapi.application.WriteAction;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.fileTypes.PlainTextFileType;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectUtil;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
@@ -62,7 +63,7 @@ public class GenerateBridgeWriter {
      * 创建 lib/generated/bridge 文件夹
      */
     private static VirtualFile createDir(Project project) {
-        VirtualFile libFile = project.getBaseDir().findChild(Constants.ROOT_DIR);
+        VirtualFile libFile = ProjectUtil.guessProjectDir(project).findChild(Constants.ROOT_DIR);
         if (libFile == null) return null;
         try {
             WriteAction.run((ThrowableRunnable<Throwable>) () -> {
