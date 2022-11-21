@@ -73,8 +73,11 @@ public class GenerateBridgeParser {
     private static BridgeBean.BridgeInfoBean parseMethod(Class<?> dartTypeCls, ASTNode methodNode) {
         //获取返回值类型
         ASTNode returnTypeNode = methodNode.getChildren(new ReturnTypeElement(dartTypeCls).getTokenSet())[0];
-        if (!(Constants.RETURN_TYPE.equals(returnTypeNode.getText()) ||
-                Constants.RETURN_TYPE_FUTURE.equals(returnTypeNode.getText()))) {
+        //获取参数
+        ASTNode paramsListNode = methodNode.getChildren(new FormalParameterListElement(dartTypeCls).getTokenSet())[0];
+        ASTNode[] paramsNode = paramsListNode.getChildren(new NormalFormalParameterElement(dartTypeCls).getTokenSet());
+        if (paramsNode.length == 0) return null;
+        if (!(Constants.RETURN_TYPE.equals(returnTypeNode.getText()) || Constants.RETURN_TYPE_FUTURE.equals(returnTypeNode.getText()) || paramsNode[0].getText().startsWith(Constants.PARAMS_TYPE))) {
             return null;
         }
         BridgeBean.BridgeInfoBean bean = new BridgeBean.BridgeInfoBean();

@@ -20,6 +20,8 @@ public interface Constants {
 
     String RETURN_TYPE_FUTURE = "Future<R>";
 
+    String PARAMS_TYPE = "Map<String, String>";
+
     String URL_ANNOTATION = "@Url";
 
     String KEY_URL = "url";

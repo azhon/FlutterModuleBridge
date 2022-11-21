@@ -10,7 +10,7 @@
 1. 一个dart文件只能有一个class，存放`lib/`目录下
 2. class必须`with Bridge`
 3. 方法必须使用`@Url`注解
-4. 方法返回值必须是`R`或者`Future<R>`类型
+4. 方法参数必须是`Map<String, String>`，返回值必须是`R`或者`Future<R>`类型
 
 ### 示例如下：
 
@@ -20,12 +20,12 @@ import 'package:module_bridge/module_bridge.dart';
 class UserBridge with Bridge {
 
   @Url(url: '/user/getUserId', desc: '获取用户Id')
-  R getUserId() {
+  R getUserId(Map<String, String> params) {
     return R.ok(data: 1234);
   }
 
   @Url(url: '/user/getUserName', desc: '获取用户名称')
-  Future<R> getUserName() async {
+  Future<R> getUserName(Map<String, String> params) async {
     return R.ok(data: 'azhon');
   }
 }

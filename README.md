@@ -12,7 +12,7 @@
 1. A dart file can only have one class, stored in the `lib/` directory
 2. The class must be `with Bridge`
 3. The method must be annotated with `@Url`
-4. The return value of the method must be `R` or `Future<R>` type
+4. The method parameter must be `Map<String, String>`, and the return value must be `R` or `Future<R>` type
 
 ### Examples:
 
@@ -22,12 +22,12 @@ import 'package:module_bridge/module_bridge.dart';
 class UserBridge with Bridge {
 
    @Url(url: '/user/getUserId', desc: 'Get UserId')
-   R getUserId() {
+   R getUserId(Map<String, String> params) {
      return R.ok(data: 1234);
    }
 
    @Url(url: '/user/getUserName', desc: 'Get user name')
-   Future<R> getUserName() async {
+   Future<R> getUserName(Map<String, String> params) async {
      return R.ok(data: 'azhon');
    }
 }
