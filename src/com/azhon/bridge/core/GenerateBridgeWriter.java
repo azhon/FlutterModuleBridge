@@ -16,6 +16,9 @@ import com.intellij.psi.PsiManager;
 import com.intellij.util.ThrowableRunnable;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
@@ -53,10 +56,17 @@ public class GenerateBridgeWriter {
         String fileName = moduleName + Constants.GENERATED_FILE_NAME;
         PsiFile psiFile = psiDirectory.findFile(fileName);
         if (psiFile != null) {
-            psiFile.delete();
+            try {
+                OutputStream out = psiFile.getVirtualFile().getOutputStream(dirFile);
+                out.write(code.getBytes(StandardCharsets.UTF_8));
+                out.flush();
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            psiDirectory.add(factory.createFileFromText(fileName, getDartFileType(), code));
         }
-        psiFile = factory.createFileFromText(fileName, getDartFileType(), code);
-        psiDirectory.add(psiFile);
     }
 
     /**

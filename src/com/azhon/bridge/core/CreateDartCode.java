@@ -33,6 +33,7 @@ public class CreateDartCode {
         codes.append("  Map<String, Function> get bridges => _functions;");
         codes.append("\n");
         codes.append("}");
+        codes.append("\n");
         return codes.toString();
     }
 
