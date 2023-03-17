@@ -3,7 +3,7 @@
 ### Dart模块化开发，事件通信模板生成插件(AS、IDEA)
 <img src="https://github.com/azhon/FlutterModuleBridge/blob/main/imgs/plugin.png" width="750" >
 
-- 菜单栏`Build -> FlutterModuleBridge`
+- 菜单栏`Tools -> Build Flutter Bridge`
 - 或者使用快捷键`Alt + B`
 
 ### 对于`Bridge`模板有如下几个要求

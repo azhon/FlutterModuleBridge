@@ -5,7 +5,7 @@
 ### Dart modular development, event communication template generation plugin (AS, IDEA)
 <img src="https://github.com/azhon/FlutterModuleBridge/blob/main/imgs/plugin.png" width="750" >
 
-- Menu `Build -> FlutterModuleBridge`
+- Menu `Tools -> Build Flutter Bridge`
 - Or use shortcut keys`Alt + B`
 
 ### There are several requirements for the `Bridge` template

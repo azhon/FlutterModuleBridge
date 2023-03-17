@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.azhon.flutter.module.bridge</id>
     <name>FlutterModuleBridge</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <vendor email="azhon.cn@gmail.com" url="https://github.com/azhon/FlutterModuleBridge">azhon</vendor>
 
     <description><![CDATA[
@@ -9,7 +9,7 @@
       <ul>
         <li>Mainly solve the decoupling between modules.</li>
         <li>Pressing Alt+B will automatically generate event communication codes.</li>
-        <li>Or in the menu Build —> FlutterModuleBridge.</li>
+        <li>Or in the menu Tools —> Build Flutter Bridge.</li>
       </ul>
       <br><a href="https://github.com/azhon/module_bridge#readme">Instructions for use</a></br>
     ]]></description>
@@ -33,8 +33,8 @@
 
     <actions>
         <action id="FlutterModuleBridge" class="com.azhon.bridge.core.ModuleBridgeAction"
-                text="FlutterModuleBridge" description="Generate module event communication codes">
-            <add-to-group group-id="BuildMenu" anchor="first"/>
+                text="Build Flutter Bridge" description="Generate module event communication codes">
+            <add-to-group group-id="ToolsMenu"/>
             <keyboard-shortcut keymap="$default" first-keystroke="alt b"/>
         </action>
     </actions>
