@@ -31,7 +31,7 @@ class ModuleBridgeAction extends AnAction {
         Collection<VirtualFile> bridgeFile = FileUtil.getBridgeDartFile(project);
         if (bridgeFile == null || bridgeFile.isEmpty()) {
             //没有需要生成的类
-            NotificationUtil.showNotify("No dart file need to be generate！");
+            NotificationUtil.showNotify(project, "No dart file need to be generate！");
             return;
         }
         final List<BridgeBean> bridgeList = new ArrayList<>();
@@ -39,6 +39,6 @@ class ModuleBridgeAction extends AnAction {
             bridgeList.add(GenerateBridgeParser.parserFile(project, file));
         }
         GenerateBridgeWriter.writerFile(project, bridgeList);
-        NotificationUtil.showNotify("Generate Bridge Successful！");
+        NotificationUtil.showNotify(project, "Generate Bridge Successful！");
     }
 }

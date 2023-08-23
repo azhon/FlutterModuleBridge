@@ -5,9 +5,9 @@ import com.azhon.bridge.common.Constants;
 import com.azhon.bridge.util.FileUtil;
 import com.intellij.openapi.application.WriteAction;
 import com.intellij.openapi.fileTypes.FileType;
-import com.intellij.openapi.fileTypes.PlainTextFileType;
+import com.intellij.openapi.fileTypes.UnknownFileType;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.project.ProjectUtil;
+import com.intellij.openapi.vfs.StandardFileSystems;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
@@ -73,7 +73,8 @@ public class GenerateBridgeWriter {
      * 创建 lib/generated/bridge 文件夹
      */
     private static VirtualFile createDir(Project project) {
-        VirtualFile libFile = ProjectUtil.guessProjectDir(project).findChild(Constants.ROOT_DIR);
+        VirtualFile rootVf = StandardFileSystems.local().findFileByPath(project.getBasePath());
+        VirtualFile libFile = rootVf.findChild(Constants.ROOT_DIR);
         if (libFile == null) return null;
         try {
             WriteAction.run((ThrowableRunnable<Throwable>) () -> {
@@ -102,6 +103,6 @@ public class GenerateBridgeWriter {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return PlainTextFileType.INSTANCE;
+        return UnknownFileType.INSTANCE;
     }
 }

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.azhon.flutter.module.bridge</id>
     <name>FlutterModuleBridge</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <vendor email="azhon.cn@gmail.com" url="https://github.com/azhon/FlutterModuleBridge">azhon</vendor>
 
     <description><![CDATA[
@@ -15,12 +15,12 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      <br>Support bridge parameters</br>
+      <br>opt notification</br>
     ]]>
     </change-notes>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
-    <idea-version since-build="173.0"/>
+    <idea-version since-build="203.5981.155"/>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
@@ -28,7 +28,9 @@
     <!--  IDEA.app must install Dart plugin -->
     <depends>Dart</depends>
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <notificationGroup id="Generate Bridge"
+                           displayType="BALLOON"
+                           key="notification.group.name"/>
     </extensions>
 
     <actions>
