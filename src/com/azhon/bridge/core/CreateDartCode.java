@@ -24,6 +24,7 @@ public class CreateDartCode {
         codes.append(createImportCode(moduleName, list));
         codes.append("\n");
         codes.append("class ").append(clsName).append(" {").append("\n");
+        codes.append("  static final ").append(clsName).append(" instance = ").append(clsName).append("();").append("\n");
         codes.append(createBridgeFiledCode(list));
         codes.append("\n");
         codes.append("  final Map<String, Function> _functions = {").append("\n");

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.azhon.flutter.module.bridge</id>
     <name>FlutterModuleBridge</name>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <vendor email="azhon.cn@gmail.com" url="https://github.com/azhon/FlutterModuleBridge">azhon</vendor>
 
     <description><![CDATA[
@@ -15,7 +15,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      <br>opt notification</br>
+      <br>opt generated code</br>
     ]]>
     </change-notes>
 
